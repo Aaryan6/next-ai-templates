@@ -1,9 +1,9 @@
-import LoginForm from "@/components/authentication-02";
+import Chat from "@/components/chat";
 
 export default function Home() {
   return (
     <div className="">
-      <LoginForm />
+      <Chat />
     </div>
   );
 }
