@@ -6,10 +6,8 @@
       "type": "registry:hook",
       "content": "import { create } from \"zustand\";\r\n\r\ntype SidebarState = {\r\n  isOpen: boolean;\r\n  toggleSidebar: () => void;\r\n};\r\n\r\nconst useSidebar = create<SidebarState>((set) => ({\r\n  isOpen: true,\r\n  toggleSidebar: () => set((state) => ({ isOpen: !state.isOpen })),\r\n}));\r\n\r\nexport default useSidebar;\r\n",
       "path": "hooks/use-sidebar.tsx",
-      "target": "components/hooks/use-sidebar.tsx"
+      "target": "hooks/use-sidebar.tsx"
     }
   ],
-  "dependencies": [
-    "zustand"
-  ]
+  "dependencies": ["zustand"]
 }

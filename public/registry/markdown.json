@@ -6,10 +6,8 @@
       "type": "registry:lib",
       "content": "import { FC, memo } from \"react\";\r\nimport ReactMarkdown, { Options } from \"react-markdown\";\r\n\r\nexport const MemoizedReactMarkdown: FC<Options> = memo(\r\n  ReactMarkdown,\r\n  (prevProps, nextProps) =>\r\n    prevProps.children === nextProps.children &&\r\n    prevProps.className === nextProps.className\r\n);\r\n",
       "path": "lib/markdown.ts",
-      "target": "components/lib/markdown.ts"
+      "target": "lib/markdown.ts"
     }
   ],
-  "dependencies": [
-    "react-markdown"
-  ]
+  "dependencies": ["react-markdown"]
 }
