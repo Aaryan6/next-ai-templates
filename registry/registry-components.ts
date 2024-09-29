@@ -10,8 +10,16 @@ export const ui: Registry = [
   {
     name: "chatbot-01",
     type: "registry:block",
-    registryDependencies: ["button", "input", "label", "card", "scroll-area"],
-    dependencies: ["ai", "lucide-react", "@ai-sdk/openai", "zustand"],
+    registryDependencies: [
+      "button",
+      "input",
+      "label",
+      "card",
+      "scroll-area",
+      "http://localhost:8080/next-ai-templates/public/registry/use-sidebar.json",
+      "http://localhost:8080/next-ai-templates/public/registry/markdown.json",
+    ],
+    dependencies: ["ai", "lucide-react"],
     files: [
       "block/chatbot-01/chat/chat-window.tsx",
       "block/chatbot-01/chat/chat.tsx",
@@ -21,9 +29,18 @@ export const ui: Registry = [
       "block/chatbot-01/sidebar/profile-menu.tsx",
       "block/chatbot-01/sidebar/sidebar-box.tsx",
       "block/chatbot-01/sidebar/sidebar-toggle.tsx",
-      "lib/markdown.ts",
-      "hooks/use-sidebar.tsx",
-      "api/chat-01.tsx",
     ],
+  },
+  {
+    type: "registry:hook",
+    name: "use-sidebar",
+    files: ["hooks/use-sidebar.tsx"],
+    dependencies: ["zustand"],
+  },
+  {
+    type: "registry:lib",
+    name: "markdown",
+    files: ["lib/markdown.ts"],
+    dependencies: ["react-markdown"],
   },
 ];
